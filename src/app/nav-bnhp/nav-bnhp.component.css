@@ -1,0 +1,26 @@
+.main-nav {
+  display: flex;
+}
+.mega-menu {
+  flex-direction: row-reverse;
+  /* justify-items: flex-start; */
+  padding: 0;
+  list-style: none;
+  background-color: #c30019;
+  margin: 0 20%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.mega-menu>li {
+  border: 1px solid white;
+  color: white;
+  display: table-cell;
+  padding: 15px 19px;
+  position: relative;
+  font-family: 'Arimo', sans-serif;
+  cursor: pointer;
+}
+.mega-menu>li:hover {
+  text-decoration: underline;
+}
