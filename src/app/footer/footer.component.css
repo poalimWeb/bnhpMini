@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  direction: rtl;
+  background-color: white;
+  font-size: .875rem;
+}
+.title {
+  color: palevioletred;
+}
+ul>li {
+  min-width: 170px;
+}
+ul {
+  list-style: circle;
+}

@@ -1,0 +1,19 @@
+.table {
+  border: 1px solid black;
+}
+.table>tbody {
+  border: inherit;
+  background-color: white;
+}
+.table>thead {
+  background-color: rgba(225, 226, 225, 0.932);
+}
+th {
+  border: 1px solid
+}
+.table-wrapper {
+  display: grid;
+}
+.headline {
+  text-align: center;
+}
