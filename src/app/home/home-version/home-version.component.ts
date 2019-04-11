@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home-version',
@@ -9,15 +7,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home-version.component.css']
 })
 export class HomeVersionComponent implements OnInit {
-  id;
-  hero$: Observable<any>;
+  version;
   constructor(
     private route: ActivatedRoute,
-    private router: Router
   ) {}
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['id']);
+    this.version = this.route.snapshot.params['id'];
     }
 
 }

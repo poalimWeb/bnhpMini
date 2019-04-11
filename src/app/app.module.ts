@@ -9,6 +9,7 @@ import { CreditComponent } from './credit/credit.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeModule } from './home/home.module';
+import { CreditModule } from './credit/credit.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     FormsModule,
     HomeModule,
+    CreditModule,
     AppRoutingModule
   ],
   providers: [],
