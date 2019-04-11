@@ -1,3 +1,24 @@
 <div class="container">
-    <h1>credit Works!</h1>
-  </div>
+    <div class="grid">
+      <h4 class="headline">תנועות אחרונות עבור אשראי שמספרו נגמר ב :1234</h4>
+      <img src="../../assets/visa.jpg" alt="כרטיס">
+    </div>
+<div class="table-wrapper">
+  <table class="table-blue">
+    <thead>
+      <tr>
+        <th>הועבר לידי</th>
+        <th>סכום העברה</th>
+        <th>תאריך</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataItem of dataObject">
+        <th>{{ dataItem.date }}</th>
+        <th>{{ dataItem.amount }}</th>
+        <th>{{ dataItem.referDetails }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -1,31 +1,16 @@
 <div class="container">
-<h3 class="headline">משיכות אחרונות</h3>
+    <div>
+      <h3 class="headline">משיכות אחרונות</h3>
+    </div>
 <div class="table-wrapper">
     <table class="table">
         <thead>
           <tr><th>תאריך משיכה</th><th>כמות משיכה</th><th>קוד בנקט</th></tr>
         </thead>
         <tbody>
-          <tr><th>12/02/2019</th><th>1,200</th><th>12:5988</th></tr>
-          <tr><th>12/02/2019</th><th>100</th><th>12:5988</th></tr>
-          <tr><th>11/02/2019</th><th>500</th><th>12:5988</th></tr>
-          <tr><th>11/02/2019</th><th>10,000</th><th>12:52288</th></tr>
-          <tr><th>11/02/2019</th><th>100</th><th>12:5988</th></tr>
-          <tr><th>10/02/2019</th><th>1,000</th><th>12:52288</th></tr>
-          <tr><th>10/02/2019</th><th>50</th><th>12:5988</th></tr>
-          <tr><th>10/02/2019</th><th>150</th><th>12:52288</th></tr>
-          <tr><th>09/02/2019</th><th>500</th><th>12:5988</th></tr>
-          <tr><th>09/02/2019</th><th>1,200</th><th>12:52288</th></tr>
-          <tr><th>10/02/2019</th><th>1,000</th><th>12:52288</th></tr>
-          <tr><th>10/02/2019</th><th>50</th><th>12:5988</th></tr>
-          <tr><th>10/02/2019</th><th>150</th><th>12:52288</th></tr>
-          <tr><th>09/02/2019</th><th>500</th><th>12:5988</th></tr>
-          <tr><th>09/02/2019</th><th>1,200</th><th>12:52288</th></tr>
-          <tr><th>10/02/2019</th><th>1,000</th><th>12:52288</th></tr>
-          <tr><th>10/02/2019</th><th>50</th><th>12:5988</th></tr>
-          <tr><th>10/02/2019</th><th>150</th><th>12:52288</th></tr>
-          <tr><th>09/02/2019</th><th>500</th><th>12:5988</th></tr>
-          <tr><th>09/02/2019</th><th>1,200</th><th>12:52288</th></tr>
+          <tr *ngFor='let message of dataObject'>
+              <th>{{message.date}}</th><th>{{message.amount}}</th><th>{{message.ATMId}}</th>
+          </tr>
         </tbody>
     </table>
 </div>

@@ -1,9 +1,17 @@
 .container {
   background-color: white;
-  margin: 3% 20% 3% 20%;
+  margin: 1% 20% 3% 20%;
 }
 
 img {
   float: right;
-  margin-right: 9%;
+  margin-right: 5%;
+  position: absolute;
+  right: 0;
+}
+.top {
+  border: 0;
+  height: 1px;
+  background: #5d9feb;
+  background: linear-gradient(to right,  #2e72c0 60%,#7db9e8 40%);
 }

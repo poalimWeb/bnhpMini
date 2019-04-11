@@ -1,3 +1,31 @@
 .container {
   background-color: white;
 }
+.table-blue {
+  border: 3px solid white;
+}
+.table-blue>thead>tr {
+  background-color: rgb(216, 225, 241);
+}
+.table-blue>tbody>tr {
+  border: 2px solid white;
+  background-color: rgb(238, 238, 238);
+}
+.table-wrapper {
+  display: grid;
+}
+.headline {
+  padding-top: 15px;
+  padding-right: 9px;
+  text-align: right;
+}
+.grid {
+  display: grid;
+  direction: rtl;
+  margin-bottom: 15px;
+}
+img {
+  width: 100px;
+  height: 60px;
+  margin-right: 5%;
+}

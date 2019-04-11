@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '..//dataService.service';
 
 @Component({
   selector: 'app-credit',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./credit.component.css']
 })
 export class CreditComponent implements OnInit {
-
-  constructor() { }
+  dataObject;
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getCreditData().subscribe((data) => {
+      this.dataObject = data;
+    });
   }
 
 }
