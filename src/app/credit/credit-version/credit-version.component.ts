@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-credit-version',
   templateUrl: './credit-version.component.html',
-  styleUrls: ['./credit-version.component.css']
+  styleUrls: ['./credit-version.component.scss']
 })
 export class CreditVersionComponent implements OnInit {
   version;

@@ -4,7 +4,7 @@ import { DataService } from '..//dataService.service';
 @Component({
   selector: 'app-credit',
   templateUrl: './credit.component.html',
-  styleUrls: ['./credit.component.css']
+  styleUrls: ['./credit.component.scss']
 })
 export class CreditComponent implements OnInit {
   dataObject;
