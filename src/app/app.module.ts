@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeModule } from './home/home.module';
 import { CreditModule } from './credit/credit.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CreditModule } from './credit/credit.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     HomeModule,
     CreditModule,
