@@ -5,8 +5,11 @@ import { CreditVersionComponent } from './credit-version/credit-version.componen
 import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
-  {path: 'credit', canActivate: [AuthGuard], component: CreditComponent},
-  {path: 'credit/:id', component: CreditVersionComponent}
+  {
+  path: 'credit',
+  canActivate: [AuthGuard],
+  component: CreditComponent,
+  }
 ];
 
 @NgModule({
