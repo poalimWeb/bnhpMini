@@ -10,8 +10,19 @@ import { RestService } from '../rest.service';
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router, private restService: RestService) {}
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    this.checkFeatureVersion(state.url);
-    return true;
+    if (this.checkIfUserAuthenticated()) {
+      this.checkFeatureVersion(state.url);
+      return true;
+    }
+    this.router.navigate(['home']);
+    return false;
+  }
+
+  checkIfUserAuthenticated() {
+    if (localStorage.getItem('userName')) {
+      return true;
+    }
+    return false;
   }
 
   checkFeatureVersion(url: string) {
