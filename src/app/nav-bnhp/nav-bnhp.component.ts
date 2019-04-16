@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bnhp.component.scss']
 })
 export class NavBnhpComponent implements OnInit {
-
+  featureFlag;
   constructor() { }
 
   ngOnInit() {
+    this.featureFlag = localStorage.getItem('feature_flag');
   }
 
 }

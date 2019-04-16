@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="grid">
+      <h3 class="headline">שערים יציגים עבור תאריך 16/04/2019</h3>
+    </div>
+    <div *ngIf="featureVersion == 1">
+        <h5>כפתור מוצג רק כאשר גרסת הפיצ'ר 1</h5>
+        <button class="red-style">כפתור גרסה</button>
+    </div>
+<div class="table-wrapper">
+  <table class="table-blue">
+    <thead>
+      <tr>
+        <th>מטבע יציג</th>
+        <th>מול מטבע</th>
+        <th>תעריף</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataItem of dataObject">
+        <th>{{ dataItem.currecy }}</th>
+        <th>{{ dataItem.counterCurrency }}</th>
+        <th>{{ dataItem.amount }}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

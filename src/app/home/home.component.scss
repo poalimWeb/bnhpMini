@@ -13,6 +13,16 @@
       border: 1px solid
     }
   }
+  .table-blue {
+    border: 3px solid white;
+    thead>tr {
+        background-color: rgb(216, 225, 241);
+    }
+    tbody>tr {
+        border: 2px solid white;
+        background-color: rgb(238, 238, 238);
+    }
+  }
 }
 .headline {
   text-align: center;

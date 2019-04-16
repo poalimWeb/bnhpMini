@@ -26,7 +26,7 @@
             <ul>
               <li>
                 <a routerLink="home" routerLinkActive="active" href="/">ניהול חשבון</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">פתיחת חשבון</a></li>
                   <li><a href="/">סטודנטים</a></li>
                   <li><a href="/">פועלים עד אליך</a></li>
@@ -49,7 +49,7 @@
               </li>
               <li>
                 <a routerLink="credit" routerLinkActive="active" href="/">כרטיסי אשראי</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">כרטיסי אשראי בינלאומיים</a></li>
                   <li><a href="/">כרטיסי אשראי מקומיים</a></li>
                   <li><a href="/">פועלים באינטרנט וכרטיס האשראי שלך</a></li>
@@ -58,7 +58,7 @@
               </li>
               <li>
                 <a href="/">פיקדונות וחסכונות</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">מוצרי החודש</a></li>
                   <li><a href="/">חיסכון לכל ילד</a></li>
                   <li><a href="/">דן חסכן</a></li>
@@ -72,7 +72,7 @@
               </li>
               <li>
                 <a href="/">שוק ההון</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">שוק ההון בפועלים באינטרנט</a></li>
                   <li><a href="/">אפליקציית שוק ההון</a></li>
                   <li><a href="/">ניירות ערך ישראלים</a></li>
@@ -92,8 +92,8 @@
                 </ul>
               </li>
               <li>
-                <a href="/">מט"ח</a>
-                <ul>
+                <a routerLink="foreignCurrency" routerLinkActive="active" href="/">מט"ח</a>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">הזמנת מט"ח בטרמינל</a></li>
                   <li><a href="/">מט"ח בשאנטי</a></li>
                   <li><a href="/">עוד כותרת</a></li>
@@ -107,7 +107,7 @@
               </li>
               <li>
                 <a href="/">הלוואות</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">מחויבים לחברה - נרתמים להנגשה</a></li>
                   <li><a href="/">הלוואה רב ערוצית</a></li>
                   <li><a href="/">הלוואות לכל מטרה ופתרונות אשראי</a></li>
@@ -121,7 +121,7 @@
               </li>
               <li>
                 <a href="/">משכנתא</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">משכן - פועלים משכנתאות</a></li>
                   <li><a href="/">מחשבון משכנתא</a></li>
                   <li><a href="/">פנייה למשכנתא באינטרנט</a></li>
@@ -131,7 +131,7 @@
               </li>
               <li>
                 <a href="/">ייעוץ פנסיוני</a>
-                <ul>
+                <ul *ngIf="featureFlag == 2">
                   <li><a href="/">חיסכון פנסיוני - למה זה חשוב לך?</a></li>
                   <li><a href="/">מה השתנה בעולם הפנסיה?</a></li>
                   <li><a href="/">קרן פנסיה</a></li>

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { ATMData } from './ATMData';
-import { CreditData } from './creditData';
+import { ATMData } from './models/ATMData';
+import { CreditData } from './models/creditData';
 import { Observable } from 'rxjs';
+import { ForeignCurrencyRates } from './models/foreignCurrencyRates';
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +45,17 @@ export class DataService {
                  new CreditData({date: '06/12/2019', amount: 100, referDetails: 'מימדיון'}),
                  new CreditData({date: '22/05/2019', amount: 100, referDetails: 'סופרלאנד ראשון לציון'}),
                  new CreditData({date: '12/02/2019', amount: 100, referDetails: 'LOLAPALUZA'})];
-  constructor() { }
+  foreignCurrencyRates = [new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'US Dolar', amount: 3.80}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'THY Bhat', amount: 8.20}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'UK Sterling', amount: 5.20}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'DEN koboni', amount: 7.00}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'KAT Dinar', amount: 2.80}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'EUR', amount: 4.00}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'ETB Bir', amount: 2.1}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'INR Rupi', amount: 3.52}),
+                          new ForeignCurrencyRates({currecy: 'IL Shekel', counterCurrency: 'DKK kr', amount: 3.88}),] 
+   
+ constructor() { }
 
   public getHomeData(): Observable<any> {
       return Observable.create( (observer) => {
@@ -62,5 +73,14 @@ export class DataService {
         observer.complete();
       }, 0);
     });
+  }
+
+  public getForeigCurrencyRates(): Observable<any> {
+    return Observable.create( (observer) => {
+      setTimeout (() => {
+        observer.next(this.foreignCurrencyRates);
+        observer.complete();
+      }, 0)
+    })
   }
 }

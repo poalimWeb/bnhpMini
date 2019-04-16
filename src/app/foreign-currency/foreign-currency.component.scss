@@ -1,0 +1,30 @@
+.container {
+    background-color: white;
+    .grid {
+        display: grid;
+        direction: rtl;
+        margin-bottom: 15px;
+        .headline {
+            padding-top: 15px;
+            padding-right: 9px;
+            text-align: right;
+          }        
+      }
+      .red-style {
+        background-color: cornsilk;
+        color: darkblue;
+      }
+  }
+.table-wrapper {
+    display: grid;
+    .table-blue {
+        border: 3px solid white;
+        thead>tr {
+            background-color: rgb(216, 225, 241);
+        }
+        tbody>tr {
+            border: 2px solid white;
+            background-color: rgb(238, 238, 238);
+        }
+    }
+}
