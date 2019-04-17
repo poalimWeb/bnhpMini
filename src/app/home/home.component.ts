@@ -23,12 +23,20 @@ export class HomeComponent implements OnInit {
     this.rest.get('/userData', {}).subscribe( (data) => {
       console.log(data);
       localStorage.setItem('userName', data.userName);
+    }, error => {
+      console.log('OFFLINE mode');
+      localStorage.setItem('userName', 'shahaf shuhamy');
     });
     this.rest.get('/bnhpApp', {}).subscribe( (data) => {
       console.log(data);
       for (let key of Object.keys(data)) {
         localStorage.setItem(key, data[key]);
       }
+    }, error => {
+      console.log('OFFLINE mode');
+      localStorage.setItem('home', '2');
+      localStorage.setItem('credit', '2');
+      localStorage.setItem('feature_flag', '2');
     });
     
     if (localStorage.getItem('feature_flag') == '2'){
