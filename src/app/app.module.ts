@@ -7,17 +7,20 @@ import { NavBnhpComponent } from './nav-bnhp/nav-bnhp.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBnhpComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    BrowserAnimationsModule,
+    HttpClientModule, 
     FormsModule,
     AppRoutingModule
   ],

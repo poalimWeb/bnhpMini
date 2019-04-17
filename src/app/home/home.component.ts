@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
         localStorage.setItem(key, data[key]);
       }
     });
+    
     if (localStorage.getItem('feature_flag') == '2'){
       this.tableStyleBlue = true;
     } else {

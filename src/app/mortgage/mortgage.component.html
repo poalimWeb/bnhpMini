@@ -1,0 +1,36 @@
+   <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>פרטים אישיים</ng-template>
+        <mat-form-field>
+            <input id="name-field" type="text" matInput
+               placeholder="שם פרטי, שם משפחה"
+              required formControlName="firstCtrl">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>הבא</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>כתובת למשלוח דואר</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="כתובת" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>קודם</button>
+          <button mat-button matStepperNext>הבא</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>אישור</ng-template>
+      סיימת.
+      <div>
+        <button mat-button matStepperPrevious>קודם</button>
+        <button mat-button (click)="stepper.reset()">מחדש</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  
