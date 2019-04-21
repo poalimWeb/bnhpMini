@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModul
     NavBnhpComponent,
     FooterComponent,
     PageNotFoundComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,

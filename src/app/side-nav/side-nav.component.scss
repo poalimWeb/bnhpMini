@@ -1,0 +1,45 @@
+.icon-ask-for-loan {
+    background-image:url('../../assets/bagOfMoney.svg');
+}
+.icon-transfer-money {
+    background-image:url('../../assets/whiteHamburgerNew.svg');
+}
+.icon-deposit {
+    background-image:url('../../assets/whiteCamera.svg');
+}
+.icon-arrow-down {
+    background-image:url('../../assets/downarrow.svg');
+}
+.quick-operation .quick-operations-list li div {
+    font-size: 1.0rem;
+}
+.operation-title h4 {
+    font-size: 1.0rem;
+}
+.bigger-font {
+    font-size: 1.0rem;
+}
+.accordion-menu {
+    font-size: 1.0rem;
+    .card {
+        font-size: inherit;
+    }
+}
+.accordion-menu .card-header button.collapsed {
+    background-color: #caced0 !important;
+}
+.accordion-menu .card-header button {
+    width: 100%;
+    text-align: right;
+    padding: 10px 30px;
+}
+.btn-link {
+    margin-bottom: 2px;
+    background-color: #caced0 !important;
+    background: url('../../assets/arrow_left.svg') right 10px center no-repeat #dde1e3;
+}
+
+.aside-layout-aside {
+    background-color: white;
+    padding: 5px;
+}
