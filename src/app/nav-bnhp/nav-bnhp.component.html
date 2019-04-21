@@ -1,3 +1,4 @@
+<!-- 
 <nav class="clsTopNav">
     <div class="clsPageAlign">
       <ul class="clsSitesNav">
@@ -7,13 +8,10 @@
       </ul>
       <ul class="clsLangNav">
         <li><a href="/" title="International" tabindex="4">International</a></li>
-           <!-- li><a href="https://www.bankhapoalim.co.il/russian/" title="Русский"  tabindex="5">Русский</a></li -->
         <li><a href="/" title="العربية" tabindex="6">العربية</a></li>
       </ul>
     </div>
 </nav>
-
-
 <div class="wpsPortletBody">
     <header>
         <div class="clsPageAlign">
@@ -47,9 +45,9 @@
                   <li><a href="/">תעודת זהות בנקאית</a></li>
                 </ul>
               </li>
-              <li>
+              <li *ngIf="featureFlag == 2">
                 <a routerLink="credit" routerLinkActive="active" href="/">כרטיסי אשראי</a>
-                <ul *ngIf="featureFlag == 2">
+                <ul>
                   <li><a href="/">כרטיסי אשראי בינלאומיים</a></li>
                   <li><a href="/">כרטיסי אשראי מקומיים</a></li>
                   <li><a href="/">פועלים באינטרנט וכרטיס האשראי שלך</a></li>
@@ -105,9 +103,9 @@
                   <li><a href="/">שערי חליפין</a></li>
                 </ul>
               </li>
-              <li>
+              <li *ngIf="featureFlag == 2">
                 <a href="/">הלוואות</a>
-                <ul *ngIf="featureFlag == 2">
+                <ul>
                   <li><a href="/">מחויבים לחברה - נרתמים להנגשה</a></li>
                   <li><a href="/">הלוואה רב ערוצית</a></li>
                   <li><a href="/">הלוואות לכל מטרה ופתרונות אשראי</a></li>
@@ -119,9 +117,9 @@
                   <li><a href="/">חוק נתוני אשראי</a></li>
                 </ul>
               </li>
-              <li>
+              <li *ngIf="featureFlag == 2">
                 <a routerLink="mortgage" routerLinkActive="active" href="/">משכנתא</a>
-                <ul *ngIf="featureFlag == 2">
+                <ul>
                   <li><a href="/">משכן - פועלים משכנתאות</a></li>
                   <li><a href="/">מחשבון משכנתא</a></li>
                   <li><a href="/">פנייה למשכנתא באינטרנט</a></li>
@@ -129,9 +127,9 @@
                   <li><a href="/">זכאות פועלים</a></li>
                 </ul>
               </li>
-              <li>
+              <li *ngIf="featureFlag == 2">
                 <a href="/">ייעוץ פנסיוני</a>
-                <ul *ngIf="featureFlag == 2">
+                <ul>
                   <li><a href="/">חיסכון פנסיוני - למה זה חשוב לך?</a></li>
                   <li><a href="/">מה השתנה בעולם הפנסיה?</a></li>
                   <li><a href="/">קרן פנסיה</a></li>
@@ -144,9 +142,300 @@
                   <li><a href="/">מילון מונחים</a></li>
                 </ul>
               </li>
-              <li><a href="/">פועלים UP</a></li>
+              <li *ngIf="featureFlag == 2"><a href="/">פועלים UP</a></li>
             </ul>
           </nav>
         </div>
       </header>
-    </div>
+    </div> -->
+<header>
+    <section class="container">
+      <div class="header-icon">
+        <a class="logo icon-logo" id="main" aria-label="בנק הפועלים פרטי - קישור לדף הבית" href="/ng-portals-bt/rb/he/homepage" target="_self"></a>
+      </div>
+      <div class="header-buttons d-print-none">
+        <div class="search-box">
+          <input aria-multiline="false" autocapitalize="off" autocorrect="off" class="form-control header-search-input" id="search" role="combobox" type="search" aria-describedby="search-describedby-typeahead" placeholder="חפש באתר" autocomplete="off" aria-autocomplete="list" aria-expanded="false">
+          <div aria-hidden="true" class="sr-only" id="search-describedby-typeahead">אנא החל בהקלדה, במהלך ההקלדה יפתחו אפשרויות בחירה, ניתן לנווט ביניהם בעזרת החצים מעלה ומטה</div>
+          <button class="header-search-button icon-search-red" type="button" aria-label="חפש באתר"></button>
+        </div>
+        <div class="prefixes-box"><a class="icon-menu-profile" href="/ng-portals-bt/rb/he/profile" target="_self">הגדרות והעדפות</a></div>
+        <div class="service-box">
+          <button placement="bottom" type="button" class="search-info" aria-expanded="false">שירות ותמיכה</button>
+        </div>
+      <div class="size-box">
+        <button class="icon-aleph aleph-lg" type="button" aria-label="שינוי גודל טקסט לגדול"></button>
+        <button class="icon-aleph aleph-md" type="button" aria-label="שינוי גודל טקסט לבינוני"></button>
+        <button class="icon-aleph aleph-sm" type="button" aria-label="שינוי גודל טקסט לקטן"></button>
+      </div><div class="exit-box"><button class="btn3-dark" type="button">יציאה</button><button class="icon-mobile-exit" type="button"></button></div></div></section>
+
+    <div class="container mega-menu-wrapper d-print-none">
+        <nav id="main-nav" role="navigation">
+        <ul class="mega-menu" rbkeyboardnavigation="">
+          <li class="mega-menu-item active"><a class="mega-menu-title" id="mega-menu-0" href="/" target="_self"> דף  הבית </a></li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-1" aria-controls="mega-menu-panel-1" aria-expanded="false" href="/" target="_self"> עובר   ושב </a>
+          <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-1" aria-labelledby="mega-menu-1">
+            <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
+            <h3>עובר  ושב</h3>	
+            <ul class="map-menus">
+              <li><button class="map-menu-title d-md-none">מידע </button>
+                <ul class="map-menu">
+                  <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self">תנועות בחשבון</a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self">תנועות עתידיות</a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self">ריכוז יתרות</a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self">כמה פעולות אני מבצע כל חודש</a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> up חכם </a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">העברות כספים בש"ח </button>
+                <ul class="map-menu">
+                <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">העברות כספים בש"ח</h4></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> ביצוע העברה </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס העברות </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הקמת הו"ק להעברת כספים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> משיכה מבנקט ללא כרטיס </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס משיכות מבנקט </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> המוטבים שלי </a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">שיקים </button>
+                <ul class="map-menu">
+                <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">שיקים</h4></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הזמנת פנקסי שיקים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס הזמנת פנקסים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> תנועות שיקים בחשבון </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביטול שיקים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שיקים שביטלתי </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שיקים למשמרת </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שיקים למשמרת שנפרעו </a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">הרשאות והוראות קבע </button>
+                <ul class="map-menu">
+                <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">הרשאות והוראות קבע</h4></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירוט הרשאות והוראות קבע </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" class="icon icon-star"> הקמת הוראת קבע לפר"י </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הקמת הו"ק להעברת כספים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הקמת הו"ק לקניית קרן נאמנות </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הקמת הו"ק למכירת קרן נאמנות </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הקמת הרשאה לחיוב חשבון </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> העברת הרשאות מבנק אחר </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס העברת הרשאות </a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">פועלים לעסקים בשירות עצמי </button>
+              <ul class="map-menu">
+                <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פועלים לעסקים בשירות עצמי</h4></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הצהרה על הפקדה </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס שקיות </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ניהול מורשים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הוספת מורשה </a></li>
+              </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">מידע ושירותים נוספים </button>
+              <ul class="map-menu">
+                <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע ושירותים נוספים</h4></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="https://join.bankhapoalim.co.il/accountOG2/accountopen?bankClient=1" target="window" rel="noopener"> פתיחת חשבון נוסף <i class="icon icon-external-arrow-red"></i></a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noonperner"> תעריפון הבנק <i class="icon icon-external-arrow-red"></i></a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> מדדים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הגשת בקשה לסגירת חשבון </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noonperner"> בירור חשבונות מוגבלים <i class="icon icon-external-arrow-red"></i></a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הצטרפות למועדון סטודנט </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הצטרפות למועדון אקדמאים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס העברת מידע </a></li>
+              </ul>
+              </li>
+            </ul>
+          </section>
+          </li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-2" aria-controls="mega-menu-panel-2" aria-expanded="false" href="/" target="_self"> כרטיסי   אשראי </a>
+            <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-2" aria-labelledby="mega-menu-2">
+              <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
+              <h3>כרטיסי  אשראי</h3>
+              <ul class="map-menus">
+              <li><button class="map-menu-title d-md-none">מידע </button>
+                <ul class="map-menu">
+                  <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> חיובים קרובים </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> חיובים קודמים </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביטול הוראות </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noonperner"> מידע מאתר ישראכרט <i class="icon icon-external-arrow-red"></i></a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noonperner"> מידע מאתר אמ.אקספרס <i class="icon icon-external-arrow-red"></i></a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">פעולות </button>
+                <ul class="map-menu">
+                  <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פעולות</h4></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הזמנת כרטיס </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס הזמנת כרטיס </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפעלת כרטיס חדש </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שחזור קוד סודי </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שינוי מועד חיוב </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביטול כרטיס והזמנת חלופי </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> קבלת פירוט חיובים במייל </a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">כרטיס UP CARD </button>
+                <ul class="map-menu">
+                <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">כרטיס UP CARD</h4></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הזמנת כרטיס </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> טעינת כרטיס </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> החזרת כסף לעו"ש </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> קבלת עדכונים ב-sms </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> בירור חיובים </a></li>
+                <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> בירור יתרה </a></li>
+                </ul>
+              </li>
+              </ul>
+            </section>
+          </li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-3" aria-controls="mega-menu-panel-3" aria-expanded="false" href="/" target="_self"> פיקדונות   וחסכונות </a>
+          <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-3" aria-labelledby="mega-menu-3">
+            <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
+            <h3>פיקדונות  וחסכונות</h3>
+            <ul class="map-menus">
+            <li><button class="map-menu-title d-md-none">מידע </button>
+            <ul class="map-menu">
+              <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפיקדונות והחסכונות שלי </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפיקדונות שלי במט"ח </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס הוראות בפיקדונות וחסכונות </a></li>
+            </ul>
+            </li>
+            <li><button class="map-menu-title d-md-none">פר"י </button>
+            <ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פר"י</h4></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הפקדה לפר"י </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> משיכה מפר"י </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הקמת הוראת קבע לפר"י </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שירות פיקדון מגן </a></li>
+            </ul>
+            </li>
+            <li><button class="map-menu-title d-md-none">פיקדונות שקליים </button>
+            <ul class="map-menu">
+              <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פיקדונות שקליים</h4></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הפקדה לפיקדון </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> משיכה מפיקדון </a></li>
+              <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביצוע שינויים בפיקדון </a></li>
+              </ul>
+            </li>
+          <li><button class="map-menu-title d-md-none">תכניות חיסכון </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">תכניות חיסכון</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הפקדה לחיסכון </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> משיכה מתוכנית חיסכון </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביצוע שינויים בתוכנית חיסכון </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביטול הוראה בתוכנית חיסכון </a></li>
+          </ul>
+          </li>
+          <li><button class="map-menu-title d-md-none">קופות גמל וקרנות השתלמות </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">קופות גמל וקרנות השתלמות</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירוט קופ"ג וקרנות השתלמות </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפקדה לקופת גמל </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פגישה עם יועץ פנסיוני </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> מידע מהמסלקה הפנסיונית </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ביטול הוראות </a></li>
+          </ul>
+          </li>
+          <li><button class="map-menu-title d-md-none">מיסים </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מיסים</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ריכוז גביית מס בחשבון </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פטורים ממס בחשבון </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פטורים אישיים ממס </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הזמנת אישור מס שנתי (טופס 867) </a></li>
+          </ul></li>
+          </ul></section></li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-4" aria-controls="mega-menu-panel-4" aria-expanded="false" href="/" target="_self">תשלומי  חשבונות </a><section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-4" aria-labelledby="mega-menu-4"><button class="close d-none d-md-block" tabindex="-1" type="button"></button><h3>תשלומי  חשבונות</h3><ul class="map-menus"><li><button class="map-menu-title d-md-none">מידע ועדכון כתובת </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע ועדכון כתובת</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירוט תשלומים שביצעתי </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> עדכון כתובת לתשלומים </a></li>
+          </ul></li>
+          <li><button class="map-menu-title d-md-none">תשלומים נוספים </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">תשלומים נוספים</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/ng-portals-bt/rb/he/payments/shoham/electricCorporation" target="_self" rel="noopener"> חברת חשמל <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> חברות הגז </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> בזק </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self">לתשלומים נוספים </a></li>
+          </ul></li>
+          <li><button class="map-menu-title d-md-none">תשלומים למוסדות ממשלה </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">תשלומים למוסדות ממשלה</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> מע"מ <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> מס הכנסה <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> ביטוח לאומי <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> רישיון רכב <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> רישיון נהיגה <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> דו"חות חניה </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> קנסות משטרה <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> צפייה בנסח טאבו <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> לתשלומים נוספים </a></li>
+          </ul></li>
+          </ul></section></li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-5" aria-controls="mega-menu-panel-5" aria-expanded="false" href="/" target="_self"> הלוואות  ומשכנתא </a>
+          <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-5" aria-labelledby="mega-menu-5">
+            <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
+            <h3>הלוואות ומשכנתא</h3>
+            <ul class="map-menus">
+              <li><button class="map-menu-title d-md-none">מידע </button>
+                <ul class="map-menu">
+                  <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ההלוואות והמשכנתא שלי </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שינוי ביטול הוראות </a></li>
+                </ul>
+              </li>
+              <li><button class="map-menu-title d-md-none">פעולות בהלוואות </button>
+                <ul class="map-menu">
+                  <li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פעולות בהלוואות</h4></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הגשת בקשה להלוואה </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס בקשת הלוואה </a></li>
+                  <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירעון הלוואת אשראי ברגע </a></li>
+                </ul>
+              </li>
+          <li><button class="map-menu-title d-md-none">פעולות במשכנתא </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פעולות במשכנתא</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="https://www.bankhapoalim.co.il/wps/portal/mashkanta/pniya" target="window" rel="noopener"> הגשת בקשה למשכנתא <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הזמנת מכתב כוונות </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הודעה על פירעון מוקדם </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפקת דו"חות </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> חודש חופש מהמשכנתא </a></li>
+          </ul></li>
+          <li><button class="map-menu-title d-md-none">מחשבונים </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מחשבונים</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="https://www.bankhapoalim.co.il/calculators/calcHalvaotNew.html" target="window" rel="noopener"> מחשבון הלוואות <i class="icon icon-external-arrow-red"></i></a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="https://tools.bizportal.co.il/MortgageCalculator" target="window" rel="noopener"> מחשבון מסלולי משכנתא <i class="icon icon-external-arrow-red"></i></a></li>
+          </ul></li>
+          </ul></section></li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-6" aria-controls="mega-menu-panel-6" aria-expanded="false" href="/" target="_self"> מטבע  חוץ </a><section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-6" aria-labelledby="mega-menu-6"><button class="close d-none d-md-block" tabindex="-1" type="button"></button><h3>מטבע  חוץ</h3><ul class="map-menus"><li><button class="map-menu-title d-md-none">מידע </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> תנועות בחשבון מט"ח </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הלוואות </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הערבויות שלי במט"ח </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שערי מט"ח </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שינוי/ביטול הוראות </a></li>
+          </ul></li>
+          <li><button class="map-menu-title d-md-none">המרות </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">המרות</h4></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> המרת שקלים למט"ח </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> המרת מט"ח לשקלים </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> המרת מט"ח למט"ח </a></li>
+          <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הקמת הוראת קבע לרכישת מט"ח </a></li>
+          </ul></li>
+          <li><button class="map-menu-title d-md-none">פיקדונות </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">פיקדונות</h4></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפיקדונות שלי במט"ח </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> תנועות בפיקדונות </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הפקדה לפיקדון </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> משיכה מפיקדון/ אי חידוש </a></li>
+            </ul></li>
+            <li><button class="map-menu-title d-md-none">העברות </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">העברות</h4></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> העברה לבנק הפועלים </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> העברה לבנק אחר </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> אישורים על העברות במט"ח </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס העברות מט"ח </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> זיכוי סוויפט (swift) </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ניהול מוטבים-מט"ח סח"ח </a></li>
+            </ul></li>
+            <li><button class="map-menu-title d-md-none">מט"ח בטרמינל </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מט"ח בטרמינל</h4></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"><i class="icon icon-star"></i> הזמנה חדשה </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> סטטוס ועדכון/ביטול הזמנות </a></li>
+            </ul></li>
+            <li><button class="map-menu-title d-md-none">עסקאות עתידיות </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">עסקאות עתידיות</h4></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הוראות בהגבלת שער </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> ריכוז יתרה למטבע </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> יתרת פוזיציות עדכנית </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירוט עסקאות </a></li>
+            <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שערוך היסטורי </a></li>
+            </ul></li>
+            </ul></section></li>
+            <li class="mega-menu-item"><a class="mega-menu-title" id="mega-menu-7" href="/" target="_self"> פועלים  UP ומסלולים </a></li>
+            <li class="mega-menu-item"><a class="mega-menu-title" id="mega-menu-8" href="/" target="_self"> ניהול  תקציב </a></li>
+            <li class="mega-menu-item"><a class="mega-menu-title" id="mega-menu-9" href="/" target="_self" rel="noopener"> לאתר  שוק ההון <i class="icon icon-external-arrow-white"></i></a></li>
+            </ul></nav></div>
+</header>

@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class RestService {
   private options = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }) , params: {}};
-  // localhost private baseUrl = 'http://localhost:8080';
-  private baseUrl = 'bnhp-mini-server.herokuapp.com';
+  private baseUrl = 'http://localhost:8080';
+  // private baseUrl = 'bnhp-mini-server.herokuapp.com';
   constructor(private http: HttpClient) { }
 
   get(url: string, params): Observable<any> {
