@@ -1,4 +1,4 @@
-   <mat-horizontal-stepper [linear]="isLinear" #stepper>
+   <!-- <mat-horizontal-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>פרטים אישיים</ng-template>
@@ -33,4 +33,65 @@
       </div>
     </mat-step>
   </mat-horizontal-stepper>
+   -->
+<app-wizard>
+     <app-wizard-step heading="פרטי העברה">
+     </app-wizard-step>
+     <app-wizard-step heading="אישור">
+    </app-wizard-step>
+    <app-wizard-step heading="סיום">
+    </app-wizard-step>
+</app-wizard>
+<div class="content-wrapper">
+    <div *ngIf="index === 0" class="wizard-step-content">
+        <section>
+          <h2>?למי להעביר</h2>
+          <div class="content-group-beneficiary">
+              <label class="content-group-title">שם המוטב</label>
+              <input placeholder="הקלד">
+              <button class="btn-blue btn-list" type="button">בחר מההעברות הקודמות ומהמוטבים שלך</button>
+          </div>
+          <div class="accounts">
+            <div class="account">
+                <label>בנק</label>
+                <input>
+            </div>
+            <div class="account">
+              <label>סניף</label>
+              <input>
+            </div>
+            <div class="account">
+              <label>חשבון</label>
+              <input placeholder="רק ספרות, בלי לוכסן(/)">
+            </div>
+          </div>  
+        </section>
+        <section>
+          <div class="content-group-sum">
+              <h2>כמה להעביר?</h2>
+              <label class="content-group-title">סכום להעברה</label>
+              <input>
+              <span class="content-group-span">העברות מעל 50,000 ש"ח למוטב מזדמן עשויות להישלח לאישור של בנקאי - על פי שיקולו של הבנק</span>
+          </div>
+        </section>
+        <section>
+          <h2>מתי להעביר?</h2>
+          <div class="content-group-sum">
+              <label class="content-group-title">תאריך ההעברה</label>
+              <input>
+              <span class="content-group-span">בבחירת מועד עתידי ההעברה תבוצע בכפוף לירת עו"ש מספקת בתאריך הביצוע, ובתנאי שלא תהיה מניעה לביצועה</span>
+          </div>
+          <br>
+          <div class="content-group-sum">
+              <label class="content-group-title">הערה אישית</label>
+              <input>
+              <span style="display:block">כאן תוכל להוסיף הערה אישית שתוצג גם בתנועות חשבונך וגם בתנועות החשבון המזוכה</span>
+          </div>
+        </section>
+        <div class="wizard-step-footer">
+            <button type="button" class="btn3" (click)="next()">הבא</button>
+        </div>
+    </div>    
+    <br><br>  
+</div>
   

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MortgageRoutingModule } from './mortgage-routing.module';
 import { MortgageComponent } from './mortgage.component';
 import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
+import { WizardModule } from '../wizard/wizard.module';
 
 @NgModule({
   declarations: [MortgageComponent],
@@ -16,6 +17,7 @@ import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModul
     MatInputModule,
     MatButtonModule,
     MatAutocompleteModule, 
+    WizardModule,
     MortgageRoutingModule
   ]
 })

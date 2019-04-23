@@ -1,3 +1,40 @@
 ::ng-deep .mat-step-header .mat-step-icon-selected {
     background-color: #C40019; 
  }
+
+ .wizard {
+     margin-bottom: 0;
+ }
+
+ .wizard-step-content>section {
+     margin: auto, 10px;
+ }
+
+ .content-wrapper {
+    display: block;
+    width: 672px;
+    margin-right: 30px;
+ }
+ .content-group-beneficiary {
+     max-width:none;
+     margin-bottom: 0;
+     justify-content: space-between;
+     align-items: center;
+     display: flex;
+     flex-flow: row wrap;  
+ }
+ .content-group-title {
+    font-size: 1rem;
+    display:block;
+ }
+
+ .content-group-span {
+    margin-top: 10px;
+    display: block;
+    width: 360px;
+ }
+
+ .accounts{
+     margin-top: 20px;
+     display: inline-flex;
+ }

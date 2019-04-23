@@ -1,0 +1,9 @@
+.wizard-header-text{
+    font-size: 1.3rem;
+    line-height: normal;
+}  
+.wizard-header-text:before {
+    background-color: rgb(206, 206, 206);
+    color: #fff;
+    content: counter(circle);
+}

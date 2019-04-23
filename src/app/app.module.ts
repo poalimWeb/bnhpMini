@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     NavBnhpComponent,
     FooterComponent,
     PageNotFoundComponent,
-    SideNavComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

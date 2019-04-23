@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { WizardComponent } from '../wizard/wizard.component';
 
 @Component({
   selector: 'app-mortgage',
@@ -7,7 +8,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./mortgage.component.scss']
 })
 export class MortgageComponent implements OnInit {
-
+  @ViewChild(WizardComponent) private wizard: WizardComponent;
+  index=0;
+  form: FormGroup;
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -21,6 +24,22 @@ export class MortgageComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+    this.form = this._formBuilder.group({
+      someControl: ['', Validators.required]
+    });
+  }
+
+  next() {
+    this.index++;
+    this.wizard.next();
+  }
+
+  next2() {
+    this.wizard.next();
+  }
+
+  prev() {
+    this.index--;
   }
 
 }

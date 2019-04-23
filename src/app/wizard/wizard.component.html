@@ -1,0 +1,27 @@
+<div>
+  <ul class="wizard-headers">
+    <li class="wizard-header" [class.active]="activeStepIndex === 0">
+      <a class="wizard-header-text"
+        [attr.tabindex]="1"
+        #stepTitle><span>פרטי העברה</span></a>
+    </li>
+    <li class="wizard-header" [class.active]="activeStepIndex === 1">
+        <a class="wizard-header-text"
+          [attr.tabindex]="2"
+          #stepTitle><span>אישור</span></a>
+      </li>
+      <li class="wizard-header" [class.active]="activeStepIndex === 2">
+          <a class="wizard-header-text"
+            [attr.tabindex]="3"
+            #stepTitle><span>סיום</span></a>
+        </li>
+  </ul>
+</div>
+
+<div class="wizard-content">
+  <ng-template ngFor let-step [ngForOf]="steps">
+    <div *ngIf="step.active">
+      <ng-template [ngTemplateOutlet]="step.contentTpl?.templatRef"></ng-template>
+    </div>
+  </ng-template>
+</div>
