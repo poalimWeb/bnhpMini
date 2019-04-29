@@ -14,6 +14,7 @@ export class MortgageComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  featureVersion;
 
   constructor(private _formBuilder: FormBuilder) {}
 
@@ -27,6 +28,7 @@ export class MortgageComponent implements OnInit {
     this.form = this._formBuilder.group({
       someControl: ['', Validators.required]
     });
+    this.featureVersion = localStorage.getItem('feature_flag');
   }
 
   next() {

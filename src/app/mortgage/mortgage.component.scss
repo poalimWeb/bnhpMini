@@ -38,3 +38,95 @@
      margin-top: 20px;
      display: inline-flex;
  }
+ .transfer-approve {
+     max-width: 300px;
+     border: 1px solid #d1d3d7;
+     border-radius: 4px;
+     background-color: #fff;
+     box-shadow: 0 3px 3 #d1d3d7;
+     padding: 10px 20px;
+     margin: auto;
+     text-align: center;
+     .tranfer-name-text {
+        color: #333;
+        font-size: 24px;
+        font-weight: 400;
+     }
+     .transfer-code-text {
+        display: block;
+        padding-top: 8px;
+     }
+ }
+ .center-text {
+     text-align: center;
+     margin: 20px 10px;
+    .balance-number {
+        font-size: 45px;
+    }
+ }
+
+ .wizard-step-content>section>h3 {
+    font-size: 1.5rem;
+}
+.text-list {
+    list-style: none;
+    margin-left: 80px;
+    list-style: none;
+    margin-right: 100px; 
+}
+.number-list {
+    list-style: none;
+}
+.h6 {
+    font-size: 1.1rem;
+}
+.save-money {
+    color: #348597;
+    font-size: 1.0rem;
+    font-family: Poalim-Arial;
+}
+.roInfo {
+    background-image: url('./../../assets/downarrow.svg');
+}
+.ok::before {
+    content:"";
+    position: relative;
+    display: block;
+    width:24px;
+    margin-left: 5px;
+    height: 24px;
+    border-radius: 50%;
+    background: url('./../../assets/done_green_circle.png') center/25px no-repeat;
+}
+.ok {
+    display: inline-flex;
+    color: #278119;
+}
+.doArrow-icon {
+    background-image: url('./../../assets/downarrow.svg');
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.underline-bold {
+    text-decoration: underline;
+    color: black;
+}
+.phone {
+    background: url('./../../assets/phone_icon.png') center/25px no-repeat;
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+}

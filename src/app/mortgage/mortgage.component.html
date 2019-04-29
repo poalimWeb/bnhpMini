@@ -45,7 +45,7 @@
 <div class="content-wrapper">
     <div *ngIf="index === 0" class="wizard-step-content">
         <section>
-          <h2>?למי להעביר</h2>
+          <h2>למי להעביר?</h2>
           <div class="content-group-beneficiary">
               <label class="content-group-title">שם המוטב</label>
               <input placeholder="הקלד">
@@ -91,7 +91,136 @@
         <div class="wizard-step-footer">
             <button type="button" class="btn3" (click)="next()">הבא</button>
         </div>
-    </div>    
+    </div>   
+    <div *ngIf="index === 1" class="wizard-step-content">
+      <section>
+        <h3>אשר את פרטי ההעברה:</h3>
+        <div class="transfer-approve">
+          <h5 class="tranfer-name-text">מר גרינה</h5>
+          <div class="transfer-code-text">בנק לאומי, רחובות , 5977357</div>
+        </div>
+        <div class="center-text">
+          <img class="arrow-icon">
+          <span class="balance-number">1,000.00</span>
+          <img class="balance-currency">
+        </div>
+        <div class="transfer-approve">
+          <h5 class="tranfer-name-text">מר מלדה</h5>
+          <div class="transfer-code-text">בנק אוצר החייל, שדרות, 11254</div>
+        </div>
+        <hr>
+        <div style="display: inline-flex">
+          <ul class="text-list">
+            <li class="h6">יתרתך הצפויה לאחר ביצוע ההעברה:</li>
+            <li class="h6">תאריך ביצוע ההעברה:</li>
+          </ul>
+          <ul class="number-list">
+            <li class="h6"> 156,000 ש"ח</li>
+            <li class="h6">14/10/2019</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div>
+          <ul>
+            <li>
+              <span>SMS ישלח למספר זה בעת ביצוע ההעברה: </span><span>256</span><span>****</span><span>-</span><span>052</span>
+              <div><span>לעדכון המספר היכנס ל"פרופיל שלי"</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+       <span class="h6" style="margin-left: 130px; color: black;">סה"כ עמלות תשלום:</span>
+       <span>1.35 ILS שקל חדש</span>
+      </section>
+      <section>
+       <div>
+         <div>
+           <span class="save-money">חסכת! ביצוע הפעולה עם בנקאי בטלפון או בסניף עולה 6.5 ש"ח</span>
+         </div>
+       </div>
+      </section>
+      <div class="wizard-step-footer">
+          <button type="button" class="btn3" style="margin:0;background-image:none;" (click)="prev()">הקודם</button>
+          <p style="color:white;margin: 0 15px;">לא ניתן לבטל פעולה זו לאחר אישורה</p>
+          <button type="button" class="btn3 pull-left" (click)="next()">הבא</button>
+      </div>
+  </div> 
+  <div *ngIf="index === 2" class="wizard-step-content">
+    <section>
+      <h3 class="ok">ההעברה בוצעה בהצלחה</h3>
+    </section>
+      <section>
+        <div class="transfer-approve">
+          <h5 class="tranfer-name-text">מר גרינה</h5>
+          <div class="transfer-code-text">בנק לאומי, רחובות , 5977357</div>
+        </div>
+        <div class="center-text">
+          <img class="arrow-icon">
+          <span class="balance-number">1,000.00</span>
+          <img class="balance-currency">
+        </div>
+        <div class="transfer-approve">
+          <h5 class="tranfer-name-text">מר מלדה</h5>
+          <div class="transfer-code-text">בנק אוצר החייל, שדרות, 11254</div>
+        </div>
+        <hr>
+        <div style="display: inline-flex">
+          <ul class="text-list">
+            <li class="h6">תאריך ביצוע ההעברה:</li>
+            <li class="h6">ההוראה התקבלה בתאריך:</li>
+            <li class="h6">אסמכתא:</li>
+          </ul>
+          <ul class="number-list">
+            <li class="h6">14/10/2019</li>
+            <li class="h6">14/10/2019, 07:45</li>
+            <li class="h6">36214</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div style="display:inline-flex;">
+          <span style="width:250px;margin-left: 20px;">הקלד את הנייד של מען המשלוח לשליחת הודעת SMS בעת ביצוע ההעברה!</span>
+          <input style="
+          width: 170px;
+          margin-left: 30px;
+          height: 35px;">
+          <button type="button" class="btn3">שלח SMS</button>
+        </div>
+      </section>
+      <section>
+       <span class="h6" style="margin-left: 130px; color: black;">סה"כ עמלות תשלום:</span>
+       <span>1.35 ILS שקל חדש</span> <button class="doArrow-icon" type="button"></button>
+      </section>
+      <section>
+       <div>
+         <div>
+           <h3>לתשומת לבך <button class="doArrow-icon" type="button"></button></h3>
+           <ul>
+             <li>בקשתך להעברה תבוצע לאחר אישורה</li>
+             <li>בכל רגע תוכל להתעדכן  <span class="underline-bold"> במצב ההעברה</span></li> 
+             <li>באפשרותך לשמור מסמך זה כ  <span class="underline-bold">קובץ PDF </span> <span>במחשבך האישי</span></li>
+           </ul>
+         </div>
+       </div>
+      </section>
+      <section *ngIf="featureVersion == 1" style="display:inline-flex;">
+        <span class="phone"></span><span>תוכל לבצע פעולה זו גם באפליקצית הסלולר</span>
+      </section>
+      <div style="
+      text-align-last: left;
+      display: block;
+      background-color: white;">
+          <a style="
+          display: inline-flex;
+          color: black;
+          text-decoration: underline;
+          margin-left: 10px;"
+          routerLink="home" routerLinkActive="active">בצע העברה נוספת</a>
+          <button type="button" class="btn3 pull-left" routerLink="mortgage" routerLinkActive="active">לדף הבית שלך</button>
+      </div>
+  </div> 
     <br><br>  
 </div>
   
