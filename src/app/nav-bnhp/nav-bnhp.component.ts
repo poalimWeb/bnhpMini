@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBnhpComponent implements OnInit {
   featureFlag;
+  index = 0;
   constructor() { }
 
   ngOnInit() {
     this.featureFlag = localStorage.getItem('feature_flag');
   }
-
+  
+  updateIndex(num){
+    console.log(this.index);
+    this.index = num;
+  }
 }

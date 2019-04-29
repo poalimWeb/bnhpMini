@@ -13,22 +13,30 @@ import { HttpParams } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   dataObject;
   tableStyleBlue;
+  toggle = false;
+  featureFlag;
   constructor(private dataService: DataService,
               private rest: RestService) { }
 
   ngOnInit() {
+    this.featureFlag = localStorage.getItem('feature_flag');
+    // get component data
     this.dataService.getHomeData().subscribe((data) => {
-      this.dataObject = data;
+      if (this.featureFlag == '2'){
+        this.dataObject = data;
+      } else {
+        this.dataObject = {excMes : 'הלקוח אינו רשום לשירות UP חכם'};
+      }
     });
+    //get user data - like login
     this.rest.get('/userData', {}).subscribe( (data) => {
-      console.log(data);
       localStorage.setItem('userName', data.userName);
     }, error => {
       console.log('OFFLINE mode');
       localStorage.setItem('userName', 'shahaf shuhamy');
     });
+    // get all application keys
     this.rest.get('/bnhpApp', {}).subscribe( (data) => {
-      console.log(data);
       for (let key of Object.keys(data)) {
         localStorage.setItem(key, data[key]);
       }
@@ -38,15 +46,10 @@ export class HomeComponent implements OnInit {
       localStorage.setItem('credit', '2');
       localStorage.setItem('feature_flag', '2');
     });
-    
-    if (localStorage.getItem('feature_flag') == '2'){
-      this.tableStyleBlue = true;
-    } else {
-      this.tableStyleBlue = false;
-    }
-  }
-
-  onHomeClick() {
-
+    // if (localStorage.getItem('feature_flag') == '2'){
+    //   this.tableStyleBlue = true;
+    // } else {
+    //   this.tableStyleBlue = false;
+    // }
   }
 }

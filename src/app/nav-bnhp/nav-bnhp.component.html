@@ -172,10 +172,13 @@
     <div class="container mega-menu-wrapper d-print-none">
         <nav id="main-nav" role="navigation">
         <ul class="mega-menu" rbkeyboardnavigation="">
-          <li class="mega-menu-item active"><a class="mega-menu-title" id="mega-menu-0" href="/" target="_self" routerLink="home" routerLinkActive="active"> דף  הבית </a></li>
-          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-1" aria-controls="mega-menu-panel-1" aria-expanded="false" href="/" target="_self"
-            routerLink="mortgage" routerLinkActive="active"> עובר   ושב </a>
-          <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-1" aria-labelledby="mega-menu-1">
+          <li class="mega-menu-item" [ngClass]="index == 0 ? 'mega-menu-item active' : 'mega-menu-item'" >
+            <a class="mega-menu-title" id="mega-menu-0" href="/" target="_self" 
+            routerLink="home" routerLinkActive="active" (click)="updateIndex(0)"> UP חכם </a></li>
+          <li class="mega-menu-item with-popup" [ngClass]="index == 1 ? 'mega-menu-item with-popup active' : 'mega-menu-item with-popup'">
+            <a class="mega-menu-title" id="mega-menu-1" aria-controls="mega-menu-panel-1" aria-expanded="false" href="/" target="_self"
+            routerLink="current-account" routerLinkActive="active" (click)="updateIndex(1)"> עובר   ושב </a>
+          <!-- <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-1" aria-labelledby="mega-menu-1">
             <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
             <h3>עובר  ושב</h3>	
             <ul class="map-menus">
@@ -248,9 +251,11 @@
               </ul>
               </li>
             </ul>
-          </section>
+          </section> -->
           </li>
-          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-2" aria-controls="mega-menu-panel-2" aria-expanded="false" href="/" target="_self" routerLink="credit" routerLinkActive="active"> כרטיסי   אשראי </a>
+          <li class="mega-menu-item with-popup" [ngClass]="index == 2 ? 'mega-menu-item with-popup active' : 'mega-menu-item with-popup' " >
+            <a class="mega-menu-title" id="mega-menu-2" aria-controls="mega-menu-panel-2" aria-expanded="false" href="/" target="_self" 
+            routerLink="credit" routerLinkActive="active" (click)="updateIndex(2)"> כרטיסי   אשראי </a>
             <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-2" aria-labelledby="mega-menu-2">
               <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
               <h3>כרטיסי  אשראי</h3>
@@ -291,8 +296,9 @@
               </ul>
             </section>
           </li>
-          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-3" aria-controls="mega-menu-panel-3" aria-expanded="false" href="/" target="_self"> פיקדונות   וחסכונות </a>
-          <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-3" aria-labelledby="mega-menu-3">
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title disabled-gray" id="mega-menu-3" aria-controls="mega-menu-panel-3" 
+            aria-expanded="false" href="/" target="_self"> פיקדונות   וחסכונות </a>
+          <!-- <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-3" aria-labelledby="mega-menu-3">
             <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
             <h3>פיקדונות  וחסכונות</h3>
             <ul class="map-menus">
@@ -341,8 +347,11 @@
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פטורים אישיים ממס </a></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הזמנת אישור מס שנתי (טופס 867) </a></li>
           </ul></li>
-          </ul></section></li>
-          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-4" aria-controls="mega-menu-panel-4" aria-expanded="false" href="/" target="_self">תשלומי  חשבונות </a><section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-4" aria-labelledby="mega-menu-4"><button class="close d-none d-md-block" tabindex="-1" type="button"></button><h3>תשלומי  חשבונות</h3><ul class="map-menus"><li><button class="map-menu-title d-md-none">מידע ועדכון כתובת </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע ועדכון כתובת</h4></li>
+          </ul></section> -->
+        </li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title disabled-gray" id="mega-menu-4" aria-controls="mega-menu-panel-4" 
+            aria-expanded="false" href="/" target="_self">תשלומי  חשבונות </a>
+            <!-- <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-4" aria-labelledby="mega-menu-4"><button class="close d-none d-md-block" tabindex="-1" type="button"></button><h3>תשלומי  חשבונות</h3><ul class="map-menus"><li><button class="map-menu-title d-md-none">מידע ועדכון כתובת </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע ועדכון כתובת</h4></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירוט תשלומים שביצעתי </a></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> עדכון כתובת לתשלומים </a></li>
           </ul></li>
@@ -363,10 +372,11 @@
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self" rel="noopener"> צפייה בנסח טאבו <i class="icon icon-external-arrow-red"></i></a></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> לתשלומים נוספים </a></li>
           </ul></li>
-          </ul></section></li>
-          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-5" aria-controls="mega-menu-panel-5" aria-expanded="false" href="/" target="_self"
+          </ul></section> -->
+        </li>
+          <li class="mega-menu-item with-popup"><a class="mega-menu-title  disabled-gray" id="mega-menu-5" aria-controls="mega-menu-panel-5" aria-expanded="false" href="/" target="_self"
             > הלוואות  ומשכנתא </a>
-          <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-5" aria-labelledby="mega-menu-5">
+          <!-- <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-5" aria-labelledby="mega-menu-5">
             <button class="close d-none d-md-block" tabindex="-1" type="button"></button>
             <h3>הלוואות ומשכנתא</h3>
             <ul class="map-menus">
@@ -396,9 +406,12 @@
           <li class="map-menu-item"><a class="map-menu-link" href="https://www.bankhapoalim.co.il/calculators/calcHalvaotNew.html" target="window" rel="noopener"> מחשבון הלוואות <i class="icon icon-external-arrow-red"></i></a></li>
           <li class="map-menu-item"><a class="map-menu-link" href="https://tools.bizportal.co.il/MortgageCalculator" target="window" rel="noopener"> מחשבון מסלולי משכנתא <i class="icon icon-external-arrow-red"></i></a></li>
           </ul></li>
-          </ul></section></li>
-          <li class="mega-menu-item with-popup"><a class="mega-menu-title" id="mega-menu-6" aria-controls="mega-menu-panel-6" aria-expanded="false" href="/" target="_self"
-            routerLink="foreignCurrency" routerLinkActive="active"> מטבע  חוץ </a><section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-6" aria-labelledby="mega-menu-6"><button class="close d-none d-md-block" tabindex="-1" type="button"></button><h3>מטבע  חוץ</h3><ul class="map-menus"><li><button class="map-menu-title d-md-none">מידע </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
+          </ul></section> -->
+        </li>
+          <li class="mega-menu-item with-popup" [ngClass]="index == 3 ? 'mega-menu-item with-popup active' : 'mega-menu-item with-popup' " >
+            <a class="mega-menu-title" id="mega-menu-6" aria-controls="mega-menu-panel-6" aria-expanded="false" href="/" target="_self"
+            routerLink="foreignCurrency" routerLinkActive="active" (click)="updateIndex(3)"> מטבע  חוץ </a>
+            <!-- <section class="mega-menu-popup" role="region" aria-expanded="false" aria-hidden="true" id="mega-menu-panel-6" aria-labelledby="mega-menu-6"><button class="close d-none d-md-block" tabindex="-1" type="button"></button><h3>מטבע  חוץ</h3><ul class="map-menus"><li><button class="map-menu-title d-md-none">מידע </button><ul class="map-menu"><li class="map-menu-item d-none d-md-block"><h4 class="map-menu-title">מידע</h4></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> תנועות בחשבון מט"ח </a></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הלוואות </a></li>
           <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> הערבויות שלי במט"ח </a></li>
@@ -436,9 +449,10 @@
             <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> פירוט עסקאות </a></li>
             <li class="map-menu-item"><a class="map-menu-link" href="/" target="_self"> שערוך היסטורי </a></li>
             </ul></li>
-            </ul></section></li>
-            <li class="mega-menu-item"><a class="mega-menu-title" id="mega-menu-7" href="/" target="_self"> פועלים  UP ומסלולים </a></li>
-            <li class="mega-menu-item"><a class="mega-menu-title" id="mega-menu-8" href="/" target="_self"> ניהול  תקציב </a></li>
-            <li class="mega-menu-item"><a class="mega-menu-title" id="mega-menu-9" href="/" target="_self" rel="noopener"> לאתר  שוק ההון <i class="icon icon-external-arrow-white"></i></a></li>
+            </ul></section> -->
+          </li>
+            <li class="mega-menu-item"><a class="mega-menu-title disabled-gray" id="mega-menu-7" href="/" target="_self"> פועלים  UP ומסלולים </a></li>
+            <li class="mega-menu-item disabled-gray"><a class="mega-menu-title disabled-gray" id="mega-menu-8" href="/" target="_self"> ניהול  תקציב </a></li>
+            <li class="mega-menu-item disabled-gray"><a class="mega-menu-title disabled-gray" id="mega-menu-9" href="/" target="_self" rel="noopener"> לאתר  שוק ההון <i class="icon icon-external-arrow-white"></i></a></li>
             </ul></nav></div>
 </header>

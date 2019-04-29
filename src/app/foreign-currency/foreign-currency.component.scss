@@ -28,3 +28,40 @@
         }
     }
 }
+
+.liner {
+    display: inline-flex;
+    .borderless {
+      text-align: right;
+      min-height: 32px;
+      width: 210px;
+      max-width: 210px;
+      background: url('./../../assets/downarrow.svg') .625rem center no-repeat #fff;
+      padding: .391rem .625rem .391rem 31px;
+      line-height: 1.25;
+      border-radius: 2px;
+    }
+  }
+  .liner-btns {
+    margin-right: 10px;
+    button {
+      height: 32px;
+      width: 32px;
+    }
+    .bell {
+      background: url('./../../assets/bell.svg') 14px no-repeat #fff;
+      background-position: center center;
+    }
+    .letter {
+      background: url('./../../assets/letter.svg') 14px no-repeat #fff;
+      background-position: center center;
+    }
+    .viBox {
+      background: url('./../../assets/vInABox.svg') 14px no-repeat #fff;
+      background-position: center center;
+    }
+    .ppl {
+      background: url('./../../assets/people.svg') 14px no-repeat #fff;
+      background-position: center center;
+    }
+  }

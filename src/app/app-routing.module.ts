@@ -6,7 +6,7 @@ const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home' , loadChildren: './home/home.module#HomeModule'},
     {path: 'credit', loadChildren: './credit/credit.module#CreditModule'},
-    {path: 'mortgage', loadChildren: './mortgage/mortgage.module#MortgageModule'},
+    {path: 'current-account', loadChildren: './mortgage/mortgage.module#MortgageModule'},
     {path: 'foreignCurrency', loadChildren: './foreign-currency/foreign-currency.module#ForeignCurrencyModule'},
     {path: '**', component: PageNotFoundComponent}
 ];

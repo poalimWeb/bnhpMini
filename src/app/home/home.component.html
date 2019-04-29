@@ -1,7 +1,56 @@
-<div class="container">
-    <div>
-      <h2 class="headline">משיכות אחרונות</h2>
-    </div>
+<section style="margin: 20px 20px;">
+  <h1>
+    UP חכם
+  </h1>
+  <div class="liner">
+      <button class="borderless"><span class="poalim-font">מס': עידו 656-597798</span> </button> 
+      <div class="liner-btns">
+          <button class="bell"></button>
+          <button class="letter"></button>
+          <button class="viBox"></button>
+          <button class="ppl"></button>
+      </div>
+  </div>
+</section>
+<hr>
+<div class="print-left">
+    <button class="printer" type="button"></button>
+</div>
+<div class="filter-list">
+  <button type="button" class="borderless poalim-font" (click)="toggle = !toggle">תקופה: חיובים קרובים</button>
+  <ul id="myDropdown" class="dropdown-content" [ngStyle]="{'display': toggle ? 'block' : 'none' } ">
+      <li class="dropdown-item poalim-font" href="#"><span>חיובים קרובים</span></li>
+      <li class="dropdown-item poalim-font" href="#"><span>חיובים עתידיים</span></li>
+      <li class="dropdown-item right poalim-font"><button type="button" class="btn3">הצג</button></li>
+  </ul>
+</div>
+<div class="container poalim-font">
+<div class="table-wrapper">
+  <table class="table table-striped poalim-font">
+    <thead>
+      <tr>
+        <th>תאריך ביצוע</th>
+        <th>תיאור הפעולה</th>
+        <th>אסמכתא</th>
+        <th>סכום החיוב</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="no-data" *ngIf="dataObject?.excMes">
+        <td colspan="4">{{dataObject.excMes}}</td>
+      </tr>
+        <tr *ngFor='let message of dataObject'>
+          <th>{{message.date}}</th>
+          <th>{{message.desc}}</th>
+          <th>{{message.ATMId}}</th>
+          <th>{{message.amount}}</th>
+        </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<!-- <div class="container">
+    
 <div class="table-wrapper">
     <table [ngClass]=" tableStyleBlue ? 'table-blue' : 'table' ">
         <thead>
@@ -14,4 +63,4 @@
         </tbody>
     </table>
 </div>
-</div>
+</div> -->
