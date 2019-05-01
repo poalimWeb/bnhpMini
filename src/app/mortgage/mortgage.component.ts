@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { RestService } from '../rest.service';
 import { WizardComponent } from '../wizard/wizard.component';
 
 @Component({
@@ -16,7 +17,8 @@ export class MortgageComponent implements OnInit {
   secondFormGroup: FormGroup;
   featureVersion;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder,
+              private rest: RestService) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -28,7 +30,14 @@ export class MortgageComponent implements OnInit {
     this.form = this._formBuilder.group({
       someControl: ['', Validators.required]
     });
-    this.featureVersion = localStorage.getItem('feature_flag');
+    // rest call
+    this.rest.get('/current-account', {}).subscribe( (data) => {
+      localStorage.setItem('current-account', data.version);
+    }, error => {
+      console.log('OFFLINE mode');
+      localStorage.setItem('current-account', '2');
+    });
+    this.featureVersion = localStorage.getItem('current-account');
   }
 
   next() {
