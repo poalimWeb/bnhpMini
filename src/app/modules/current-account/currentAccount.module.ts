@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MortgageRoutingModule } from './mortgage-routing.module';
-import { MortgageComponent } from './mortgage.component';
+import { currentAccountRoutingModule } from './currentAccount-routing.module';
+import { currentAccountComponent } from './currentAccount.component';
 import { MatStepperModule, MatInputModule, MatButtonModule, MatAutocompleteModule } from '@angular/material';
 import { WizardModule } from '../wizard/wizard.module';
 
 @NgModule({
-  declarations: [MortgageComponent],
+  declarations: [currentAccountComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -16,9 +16,9 @@ import { WizardModule } from '../wizard/wizard.module';
     MatStepperModule,
     MatInputModule,
     MatButtonModule,
-    MatAutocompleteModule, 
+    MatAutocompleteModule,
     WizardModule,
-    MortgageRoutingModule
+    currentAccountRoutingModule
   ]
 })
-export class MortgageModule { }
+export class currentAccountModule { }

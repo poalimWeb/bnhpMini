@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../dataService.service';
+import { DataService } from '../../dataService.service';
 import { Injectable } from '@angular/core';
-import { RestService } from '../rest.service';
+import { RestService } from '../../rest.service';
 import { HttpParams } from '@angular/common/http';
 
 @Component({

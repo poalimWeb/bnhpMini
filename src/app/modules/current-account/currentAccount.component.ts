@@ -1,14 +1,14 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { RestService } from '../rest.service';
+import { RestService } from '../../rest.service';
 import { WizardComponent } from '../wizard/wizard.component';
 
 @Component({
-  selector: 'app-mortgage',
-  templateUrl: './mortgage.component.html',
-  styleUrls: ['./mortgage.component.scss']
+  selector: 'app-CurrentAccount',
+  templateUrl: './currentAccount.component.html',
+  styleUrls: ['./currentAccount.component.scss']
 })
-export class MortgageComponent implements OnInit {
+export class currentAccountComponent implements OnInit {
   @ViewChild(WizardComponent) private wizard: WizardComponent;
   index=0;
   form: FormGroup;

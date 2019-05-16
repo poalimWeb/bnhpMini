@@ -1,5 +1,5 @@
 ::ng-deep .mat-step-header .mat-step-icon-selected {
-    background-color: #C40019; 
+    background-color: #C40019;
  }
 
  .wizard {
@@ -21,7 +21,7 @@
      justify-content: space-between;
      align-items: center;
      display: flex;
-     flex-flow: row wrap;  
+     flex-flow: row wrap;
  }
  .content-group-title {
     font-size: 1rem;
@@ -72,7 +72,7 @@
     list-style: none;
     margin-left: 80px;
     list-style: none;
-    margin-right: 100px; 
+    margin-right: 100px;
 }
 .number-list {
     list-style: none;
@@ -96,14 +96,14 @@
     margin-left: 5px;
     height: 24px;
     border-radius: 50%;
-    background: url('./../../assets/done_green_circle.png') center/25px no-repeat;
+    background: url('./../../../assets/done_green_circle.png') center/25px no-repeat;
 }
 .ok {
     display: inline-flex;
     color: #278119;
 }
 .doArrow-icon {
-    background-image: url('./../../assets/downarrow.svg');
+    background-image: url('./../../../assets/downarrow.svg');
     width: 15px;
     height: 15px;
     background-size: contain;
@@ -120,7 +120,7 @@
     color: black;
 }
 .phone {
-    background: url('./../../assets/phone_icon.png') center/25px no-repeat;
+    background: url('./../../../assets/phone_icon.png') center/25px no-repeat;
     position: relative;
     display: block;
     width: 15px;
@@ -137,7 +137,7 @@
       min-height: 32px;
       width: 210px;
       max-width: 210px;
-      background: url('./../../assets/downarrow.svg') .625rem center no-repeat #fff;
+      background: url('./../../../assets/downarrow.svg') .625rem center no-repeat #fff;
       padding: .391rem .625rem .391rem 31px;
       line-height: 1.25;
       border-radius: 2px;
@@ -150,19 +150,19 @@
       width: 32px;
     }
     .bell {
-      background: url('./../../assets/bell.svg') 14px no-repeat #fff;
+      background: url('./../../../assets/bell.svg') 14px no-repeat #fff;
       background-position: center center;
     }
     .letter {
-      background: url('./../../assets/letter.svg') 14px no-repeat #fff;
+      background: url('./../../../assets/letter.svg') 14px no-repeat #fff;
       background-position: center center;
     }
     .viBox {
-      background: url('./../../assets/vInABox.svg') 14px no-repeat #fff;
+      background: url('./../../../assets/vInABox.svg') 14px no-repeat #fff;
       background-position: center center;
     }
     .ppl {
-      background: url('./../../assets/people.svg') 14px no-repeat #fff;
+      background: url('./../../../assets/people.svg') 14px no-repeat #fff;
       background-position: center center;
     }
   }
