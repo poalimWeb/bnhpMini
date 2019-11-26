@@ -9,7 +9,7 @@ import { WizardComponent } from '../wizard/wizard.component';
   styleUrls: ['./currentAccount.component.scss']
 })
 export class currentAccountComponent implements OnInit {
-  @ViewChild(WizardComponent) private wizard: WizardComponent;
+  @ViewChild(WizardComponent, {static: false}) private wizard: WizardComponent;
   index=0;
   form: FormGroup;
   isLinear = false;

@@ -12,5 +12,5 @@ export class WizardStepDirective {
     @Input() heading: string;
     @HostBinding('class.disabled') @Input() disabled = false;
     @HostBinding('class.active') @Input() active = false;
-    @ContentChild(wizardStepContentDirective) contentTpl: wizardStepContentDirective;
+    @ContentChild(wizardStepContentDirective, {static: false}) contentTpl: wizardStepContentDirective;
 }
